@@ -5,6 +5,12 @@
 # Exercici 1: Compte enrere
 # Imprimeix els números del 10 a l'1 fent servir un bucle while.
 
+print("\nExercici 1:")
+numero = 10
+while numero >= 1:
+  print(numero)
+  numero -= 1
+
 # Exercici 2: Suma de números parells (while)
 # Calcula la suma dels números parells entre 1 i 20 (inclosos) fent servir un bucle while.
 
