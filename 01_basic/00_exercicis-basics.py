@@ -8,6 +8,9 @@ print("Escriu un programa que imprimeixi el teu nom i la teva ciutat en línies 
 
 ### Completa aquí
 
+print("Pol Gonzalez")
+print("Cerdanyola")
+
 print("--------------")
 
 print("\nExercici 2: Mostra els tipus de dades de les variables següents:")
@@ -19,6 +22,12 @@ d = True
 e = None
 
 ### Completa aquí
+
+print("Tipus de a:", type(a))
+print("Tipus de b:", type(b))
+print("Tipus de c:", type(c))
+print("Tipus de d:", type(d))
+print("Tipus de e:", type(e))
 
 print("--------------")
 
