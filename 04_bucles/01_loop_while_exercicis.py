@@ -14,7 +14,15 @@ while numero >= 1:
 # Exercici 2: Suma de números parells (while)
 # Calcula la suma dels números parells entre 1 i 20 (inclosos) fent servir un bucle while.
 
+print("\nExercici 2:")
+numero = 1
+suma_parells = 0
+while numero <= 20:
+  if numero % 2 == 0:
+    suma_parells += numero
+  numero += 1
 
+print(f"La suma és: {suma_parells}")
 
 # Exercici 3: Factorial d'un número
 # Demana a l'usuari que introdueixi un número enter positiu.
