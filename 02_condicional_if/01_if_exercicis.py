@@ -100,12 +100,27 @@ else:
 # acceptable un nivell entre -27 dBm i -8 dBm, ambdós inclosos.
 # Indica si el nivell és massa baix, acceptable o massa alt.
 
+potencia = float(input("Introdueix la potència òptica rebuda en dBm: "))
 
+if potencia < -27:
+    print("El nivell és massa baix.")
+elif potencia <= -8:
+    print("El nivell és acceptable.")
+else:
+    print("El nivell és massa alt.")
 
 # Exercici 7: Consum mensual de dades mòbils
 # Demana el consum de dades en GB d'una línia mòbil. El pla inclou 20 GB.
 # Indica si el consum és dins del límit o si l'ha superat; en aquest últim cas,
 # calcula quants GB addicionals s'han consumit.
+
+consum_gb = float(input("Introdueix el consum mensual de dades en GB: "))
+
+if consum_gb <= 20:
+    print("El consum està dins del límit de 20 GB.")
+else:
+    extra_gb = consum_gb - 20
+    print(f"S'ha superat el límit en {extra_gb:.2f} GB.")
 
 # Exercici 8: Diagnòstic d'una connexió de fibra
 # Demana si l'indicador LOS del terminal òptic està encès i si l'indicador
@@ -113,11 +128,32 @@ else:
 # revisar el cable de fibra, comprovar el servei del proveïdor o si la connexió
 # sembla funcionar correctament.
 
+los_encès = input("L'indicador LOS està encès? (s/n): ").strip().lower()
+internet_encès = input("L'indicador d'Internet està encès? (s/n): ").strip().lower()
+
+if los_encès == "s":
+    print("Cal revisar el cable de fibra.")
+elif internet_encès != "s":
+    print("Cal comprovar el servei del proveïdor.")
+else:
+    print("La connexió sembla funcionar correctament.")
+
 # Exercici 9: Bateria d'un sistema d'alimentació ininterrompuda (SAI)
 # Demana el percentatge de bateria disponible al SAI que alimenta un armari
 # de comunicacions. Indica si el nivell és crític (menys del 20 %), baix
 # (del 20 % al 49 %) o suficient (50 % o més). Rebutja valors fora del rang
 # del 0 % al 100 %.
+
+bateria = float(input("Introdueix el percentatge de bateria del SAI: "))
+
+if bateria < 0 or bateria > 100:
+    print("El percentatge ha d'estar entre el 0 % i el 100 %.")
+elif bateria < 20:
+    print("Nivell de bateria crític.")
+elif bateria < 50:
+    print("Nivell de bateria baix.")
+else:
+    print("Nivell de bateria suficient.")
 
 # Exercici 10: Qualitat d'una connexió de xarxa
 # Demana la latència en mil·lisegons i el percentatge de paquets perduts.
@@ -127,12 +163,16 @@ else:
 # del 3 % o menys; acceptable si és de 150 ms o menys i la pèrdua és del 5 %
 # o menys; en qualsevol altre cas, deficient.
 
+
+
 # Exercici 11: Cost mensual d'un pla de dades
 # Demana el tipus de pla (bàsic o plus) i el consum mensual en GB.
 # El pla bàsic costa 10 € i inclou 10 GB; cada GB addicional costa 1,50 €.
 # El pla plus costa 20 € i inclou 30 GB; cada GB addicional costa 0,75 €.
 # Rebutja un consum negatiu o un tipus de pla desconegut. Calcula i mostra el
 # cost total, tenint en compte que no es cobra l'excés si no se supera el límit.
+
+
 
 # Exercici 12: Accés a un compte de client
 # Demana si el compte està actiu, si la contrasenya és correcta i si el codi
@@ -141,6 +181,8 @@ else:
 # està desactivat, perquè la contrasenya és incorrecta o perquè falla el codi;
 # si totes les comprovacions necessàries són correctes, permet l'accés.
 
+
+
 # Exercici 13: Diagnòstic d'un router
 # Demana si el router està encès, si l'indicador LOS del terminal òptic està
 # encès i si l'indicador d'Internet del router està encès. Indica primer si
@@ -148,9 +190,13 @@ else:
 # de fibra (LOS encès), si cal contactar amb el proveïdor (Internet apagat) o
 # si la connexió funciona correctament. Considera els casos en aquest ordre.
 
+
+
 # Exercici 14: Prioritat d'una incidència de xarxa
 # Demana si la incidència afecta un servei crític, el nombre d'usuaris afectats
 # i si hi ha una alternativa de connexió disponible. Rebutja un nombre negatiu
 # d'usuaris. Assigna prioritat crítica si afecta un servei crític i no hi ha
 # alternativa, o si afecta almenys 50 usuaris i no hi ha alternativa; alta si
 # afecta almenys 10 usuaris o un servei crític; en qualsevol altre cas, baixa.
+
+
