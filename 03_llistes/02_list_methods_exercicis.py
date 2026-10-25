@@ -50,7 +50,13 @@ print(llista)
 # Compta quantes vegades apareix el nombre 2 a la llista fent servir count().
 # Comprova si el nombre 7 és a la llista fent servir in.
 
-
+llista = [5, 2, 8, 1, 9, 4, 2]
+llista.sort()
+quantitat_dos = llista.count(2)
+hi_ha_el_set = 7 in llista
+print(f"Llista ordenada: {llista}")
+print(f"Quantitat de 2: {quantitat_dos}")
+print(f"Hi ha el 7?: {hi_ha_el_set}")
 
 # Exercici 5: Còpia i referència
 # Crea una llista anomenada original amb els nombres [1, 2, 3].
@@ -60,7 +66,15 @@ print(llista)
 # Modifica a 10 el primer element de la llista referencia.
 # Imprimeix les quatre llistes (original, copia_1, copia_2 i referencia) i observa'n els canvis.
 
-
+original = [1,2,3]
+copia_1 = original[:]
+copia_2 = original.copy()
+referencia = original
+referencia[0] = 10
+print(f"Original: {original}")
+print(f"Copia 1: {copia_1}")
+print(f"Còpia 2 ): {copia_2}") 
+print(f"Referència: {referencia}") 
 
 # Exercici 6: Ordenar cadenes sense distingir entre majúscules i minúscules
 # Crea una llista amb les cadenes següents: ["Poma", "pera", "PLÀTAN", "taronja"].
