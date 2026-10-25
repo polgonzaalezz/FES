@@ -205,7 +205,6 @@ else:
     print("Tipus de pla no vàlid.")
 
 
-
 # Exercici 12: Accés a un compte de client
 # Demana si el compte està actiu, si la contrasenya és correcta i si el codi
 # de doble verificació és correcte. Demana el codi només si el compte és actiu
@@ -213,7 +212,19 @@ else:
 # està desactivat, perquè la contrasenya és incorrecta o perquè falla el codi;
 # si totes les comprovacions necessàries són correctes, permet l'accés.
 
+compte_actiu = input("El compte està actiu? (s/n): ").strip().lower()
+contrasenya_correcta = input("La contrasenya és correcta? (s/n): ").strip().lower()
 
+if compte_actiu != "s":
+    print("Accés denegat: el compte està desactivat.")
+elif contrasenya_correcta != "s":
+    print("Accés denegat: la contrasenya és incorrecta.")
+else:
+    codi_correcte = input("El codi de doble verificació és correcte? (s/n): ").strip().lower()
+    if codi_correcte == "s":
+        print("Accés permès.")
+    else:
+        print("Accés denegat: el codi de doble verificació és incorrecte.")
 
 # Exercici 13: Diagnòstic d'un router
 # Demana si el router està encès, si l'indicador LOS del terminal òptic està
@@ -222,7 +233,20 @@ else:
 # de fibra (LOS encès), si cal contactar amb el proveïdor (Internet apagat) o
 # si la connexió funciona correctament. Considera els casos en aquest ordre.
 
+router_encès = input("El router està encès? (s/n): ").strip().lower()
 
+if router_encès != "s":
+    print("Cal encendre el router.")
+else:
+    los_encès = input("L'indicador LOS està encès? (s/n): ").strip().lower()
+    internet_encès = input("L'indicador d'Internet està encès? (s/n): ").strip().lower()
+
+    if los_encès == "s":
+        print("Cal revisar el cable de fibra.")
+    elif internet_encès != "s":
+        print("Cal contactar amb el proveïdor.")
+    else:
+        print("La connexió funciona correctament.")
 
 # Exercici 14: Prioritat d'una incidència de xarxa
 # Demana si la incidència afecta un servei crític, el nombre d'usuaris afectats
