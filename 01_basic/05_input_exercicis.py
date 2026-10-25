@@ -19,8 +19,12 @@ velocitat_gbps = float(input("Velocitat de transmissió en Gbps: "))
 temps_segons = 8 / velocitat_gbps
 print(f"L'enllaç de {longitud_fibra} km necessita {temps_segons} segons per transmetre 1 GB.")
 
-
 # Exercici 3
 # Demana el nombre d'hores de feina i el preu per hora d'una instal·lació de xarxa.
 # Demana també el preu del material.
 # Mostra el cost total de la instal·lació.
+hores_feina = float(input("Nombre d'hores de feina: "))
+preu_hora = float(input("Preu per hora en euros: "))
+preu_material = float(input("Preu del material en euros: "))
+cost_total = hores_feina * preu_hora + preu_material
+print(f"EL cost total de la instal·lació és de {cost_total} euros.")
