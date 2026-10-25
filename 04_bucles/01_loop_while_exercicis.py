@@ -45,27 +45,60 @@ print(f"El factorial de {numero} és: {factorial}")
 # Fes servir un bucle while per continuar demanant la contrasenya fins que compleixi els requisits.
 # Si la contrasenya és vàlida, imprimeix "Contrasenya vàlida".
 
+contrasenya = ""
+while len(contrasenya) < 8:
+  contrasenya = input("Introdueix una contrasenya (almenys 8 caràcters): ")
+  if len(contrasenya) < 8:
+    print("La contrasenya ha de tenir almenys 8 caràcters. Torna-ho a provar.")
 
+print("Contrasenya vàlida")
 
 # Exercici 5: Taula de multiplicar
 # Demana a l'usuari que introdueixi un número.
 # Imprimeix la taula de multiplicar d'aquest número (de l'1 al 10) fent servir un bucle while.
 
+numero = int(input("Introdueix un número: "))
+multiplicador = 1
 
+while multiplicador <= 10:
+  resultat = numero * multiplicador
+  print(f"{numero} x {multiplicador} = {resultat}")
+  multiplicador += 1
 
 # Exercici 6: Números primers fins a N
 # Demana a l'usuari que introdueixi un número enter positiu N.
 # Imprimeix tots els números primers menors o iguals que N fent servir un bucle while.
 # Un número és primer si només és divisible per 1 i per ell mateix.
 
+n = int(input("Introdueix un número enter positiu N: "))
 
+numero = 2
+while numero <= n:
+  es_primer = True 
+  divisor = 2
+  while divisor * divisor <= numero:
+    if numero % divisor == 0:
+      es_primer = False 
+      break 
+    divisor += 1
+  if es_primer:
+    print(numero)
+
+  numero += 1
 
 # Exercici 7: Suma fins al zero
 # Demana a l'usuari que introdueixi números enters.
 # Ves sumant els números introduïts fins que l'usuari introdueixi el 0.
 # Al final, imprimeix la suma total. El 0 només serveix per acabar i no s'ha de sumar.
 
+suma = 0
+num = int(input("Introduieix un numero enter (0 per acabar): "))
 
+while num != 0:
+  suma += num
+  numero = int(input("Introdueix un altre número enter (0 per acabar): "))
+
+print(f"La suma total és: {suma}")
 
 # Exercici 8: Comptar les xifres d'un número
 # Demana a l'usuari que introdueixi un número enter positiu.
