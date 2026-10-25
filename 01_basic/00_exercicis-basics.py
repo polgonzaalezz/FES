@@ -37,6 +37,20 @@ print("Converteix el float 3.99 a un enter. Què passa?")
 
 ### Completa aquí
 
+cadena = 12345
+cadena_enter = int(cadena)
+cadena_decimal = float(cadena_enter)
+
+print("Nombre enter:", cadena_enter)
+print("Nombre decimal:", cadena_decimal)
+
+nombre = 3.99
+nombre_convertit = int(nombre)
+
+print("Nombre decimal original:", nombre)
+print("Nombre decimal convertit a enter (se n'elimina la part decimal):", nombre_convertit)
+
+
 print("--------------")
 
 print("\nExercici 4: Variables")
@@ -48,6 +62,11 @@ print("Utilitza f-strings per imprimir una presentació.")
 #age = 40
 
 ### Completa aquí
+nom = "Marc"
+edad = 40
+alcada = 1.75
+
+print(f"Hola! Em dic {nom}, tinc {edad} i faig {alcada}")
 
 print("--------------")
 
