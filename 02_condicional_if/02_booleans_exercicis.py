@@ -37,7 +37,7 @@ print(f"paraula_a és igual a 'Hola': {paraula_a == 'Hola'}")
 router_encès = True
 connexio_activa = False
 xarxa_disponible = router_encès and connexio_activa 
-print(f"Xarxa disponible {xarxa_disponible}")
+print(f"Xarxa disponible: {xarxa_disponible}")
 
 # Exercici 4: Avisos pendents
 # Donats els valors booleans:
@@ -45,6 +45,11 @@ print(f"Xarxa disponible {xarxa_disponible}")
 # alerta_critica = True
 # Crea una variable anomenada cal_avisar que sigui True si hi ha una
 # actualització disponible o una alerta crítica. Mostra'n el resultat.
+
+actualitzacio_disponible = False
+alerta_critica = True
+cal_avisar = actualitzacio_disponible or alerta_critica
+print(f"Cal avisar: {cal_avisar}")
 
 # Exercici 5: Accés a un compte
 # Donats els valors booleans:
@@ -57,3 +62,11 @@ print(f"Xarxa disponible {xarxa_disponible}")
 # actiu, la contrasenya és correcta, el compte no està bloquejat i, a més,
 # el codi és correcte o el dispositiu és de confiança. Fes servir and, or i not.
 # Mostra'n el resultat.
+
+compte_actiu = True
+contrasenya_correcta = True
+codi_correcte = False
+dispositiu_de_confiança = True
+compte_bloquejat = False
+accés_permes = (compte_actiu and contrasenya_correcta and (codi_correcte or dispositiu_de_confiança) and not compte_bloquejat)
+print(f"Accés permès: {accés_permes}")
