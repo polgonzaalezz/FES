@@ -83,10 +83,24 @@ else:
 # - Entre -75 dBm i menys de -67 dBm: feble
 # - Inferior a -75 dBm: molt feble
 
+rssi = float(input("Introdueix el nivell de senyal RSSI en dBm: "))
+
+if rssi >= -50:
+    print("Cobertura excel·lent.")
+elif rssi >= -67:
+    print("Cobertura bona.")
+elif rssi >= -75:
+    print("Cobertura feble.")
+else:
+    print("Cobertura molt feble.")
+
+
 # Exercici 6: Nivell de recepció d'una connexió de fibra òptica
 # Demana la potència òptica rebuda en dBm. Per a aquest exercici, considera
 # acceptable un nivell entre -27 dBm i -8 dBm, ambdós inclosos.
 # Indica si el nivell és massa baix, acceptable o massa alt.
+
+
 
 # Exercici 7: Consum mensual de dades mòbils
 # Demana el consum de dades en GB d'una línia mòbil. El pla inclou 20 GB.
