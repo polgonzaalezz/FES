@@ -40,10 +40,17 @@ elif operacio == "/":
 else:
     print("Operació no vàlida.")
 
+
 # Exercici 3: Any de traspàs
 # Demana a l'usuari que introdueixi un any i determina si és de traspàs.
 # Un any és de traspàs si és divisible per 4, excepte si és divisible per 100
 # però no per 400.
+any = int(input("Introdueix un any: "))
+
+if (any % 4 == 0 and any % 100 != 0) or any % 400 == 0:
+    print(f"L'any {any} és de traspàs.")
+else:
+    print(f"L'any {any} no és de traspàs")
 
 
 # Exercici 4: Classificar edats
@@ -53,6 +60,21 @@ else:
 # - Adolescent (13-17 anys)
 # - Adult (18-64 anys)
 # - Persona gran (65 anys o més)
+
+edat = int(input("Introdueix la teva edat: "))
+
+if 0 <= edat <= 2:
+    print("Nadó")
+elif 3 <= edat <= 12:
+    print("Infant")
+elif 13 <= edat <= 17:
+    print("Adolescent")
+elif 18 <= edat <= 64:
+    print("Adult")
+elif edat >= 65:
+    print("Persona gran")
+else:
+    print("Edat no vàlida.")
 
 # Exercici 5: Qualitat del senyal Wi-Fi
 # Demana el nivell de senyal rebut (RSSI) en dBm i classifica la cobertura:
