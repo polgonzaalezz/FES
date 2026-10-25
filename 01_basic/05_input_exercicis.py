@@ -6,12 +6,18 @@
 # Exercici 1
 # Demana el nom d'un tècnic i el nom de la xarxa que està instal·lant.
 # Després, mostra un missatge amb aquesta informació.
-
+tecnic = input("Nom del tècnic: ")
+xarxa = input("Nom de la xarxa: ")
+print(f"{tecnic} està instal·lant la xarxa {xarxa}.")
 
 # Exercici 2
 # Demana la longitud d'un enllaç de fibra en quilòmetres i la velocitat de transmissió
 # en Gbps. Mostra quants segons caldrien per transmetre 1 GB de dades.
 # Suposa que 1 GB = 8 Gb i que la velocitat es manté constant.
+longitud_fibra = float(input("Longitud de la fibra en Km: "))
+velocitat_gbps = float(input("Velocitat de transmissió en Gbps: "))
+temps_segons = 8 / velocitat_gbps
+print(f"L'enllaç de {longitud_fibra} km necessita {temps_segons} segons per transmetre 1 GB.")
 
 
 # Exercici 3
