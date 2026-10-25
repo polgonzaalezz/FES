@@ -255,4 +255,17 @@ else:
 # alternativa, o si afecta almenys 50 usuaris i no hi ha alternativa; alta si
 # afecta almenys 10 usuaris o un servei crític; en qualsevol altre cas, baixa.
 
+servei_critic = input("La incidència afecta un servei crític? (s/n): ").strip().lower()
+usuaris = int(input("Quants usuaris estan afectats? "))
 
+if usuaris < 0:
+    print("El nombre d'usuaris no pot ser negatiu.")
+else:
+    alternativa = input("Hi ha una alternativa de connexió? (s/n): ").strip().lower()
+
+    if (servei_critic == "s" and alternativa != "s") or (usuaris >= 50 and alternativa != "s"):
+        print("Prioritat crítica.")
+    elif usuaris >= 10 or servei_critic == "s":
+        print("Prioritat alta.")
+    else:
+        print("Prioritat baixa.")
