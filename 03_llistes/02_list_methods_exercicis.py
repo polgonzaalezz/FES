@@ -80,4 +80,6 @@ print(f"Referència: {referencia}")
 # Crea una llista amb les cadenes següents: ["Poma", "pera", "PLÀTAN", "taronja"].
 # Ordena la llista sense distingir entre majúscules i minúscules.
 
-
+llista = ["Poma", "pera", "PLÀTAN", "taronja"]
+llista.sort(key=str.lower)
+print(llista)
