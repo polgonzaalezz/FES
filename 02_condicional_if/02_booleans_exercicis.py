@@ -22,6 +22,10 @@ print(f"{nombre_a} == {nombre_b}: {nombre_a == nombre_b}")
 # Mostra si són iguals i si paraula_a és igual a "Hola".
 # Observa si Python distingeix entre majúscules i minúscules.
 
+paraula_a = "Hola"
+paraula_b = "hola"
+print(f"Les paraules són iguals: {paraula_a == paraula_b}")
+print(f"paraula_a és igual a 'Hola': {paraula_a == 'Hola'}")
 
 # Exercici 3: Connexió de xarxa
 # Donats els valors booleans:
@@ -29,6 +33,11 @@ print(f"{nombre_a} == {nombre_b}: {nombre_a == nombre_b}")
 # connexio_activa = False
 # Crea una variable anomenada xarxa_disponible que sigui True només si el
 # router està encès i la connexió està activa. Mostra'n el resultat.
+
+router_encès = True
+connexio_activa = False
+xarxa_disponible = router_encès and connexio_activa 
+print(f"Xarxa disponible {xarxa_disponible}")
 
 # Exercici 4: Avisos pendents
 # Donats els valors booleans:
