@@ -59,3 +59,7 @@ print(llista[centre])
 # i concatenació).
 # Exemple: llista = [1, 2, 3, 4, 5, 6] -> Resultat: [3, 2, 1, 4, 5, 6]
 
+llista = [1, 2, 3, 4, 5, 6]
+meitat = len(llista) // 2
+llista_invertida = llista[:meitat][::-1] + llista[meitat:]
+print(llista_invertida)
