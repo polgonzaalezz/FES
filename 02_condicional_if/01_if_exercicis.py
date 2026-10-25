@@ -16,11 +16,29 @@ elif num1 < num2:
 else:
     print(f"{num1} i {num2} son iguals")
 
-
 # Exercici 2: Calculadora senzilla
 # Demana a l'usuari dos nombres i una operació (+, -, *, /).
 # Fes l'operació i mostra'n el resultat (gestiona la divisió per zero).
+num1 = float(input("Primer nombre: "))
+num2 = float(input("Segon nombre: "))
+operacio = input("Introdueix l'operació (+, -, *, /): ").strip()
 
+if operacio == "/" and num2 == 0:
+    print("Error: no es pot dividir per zero.")
+elif operacio == "+":
+    resultat = num1 + num2
+    print(f"El resultat és: {resultat}")
+elif operacio == "-":
+    resultat = num1 - num2
+    print(f"El resultat és: {resultat}")
+elif operacio == "*":
+    resultat = num1 * num2
+    print(f"El resultat és: {resultat}")
+elif operacio == "/":
+    resultat = num1 / num2
+    print(f"El resultat és: {resultat}")
+else:
+    print("Operació no vàlida.")
 
 # Exercici 3: Any de traspàs
 # Demana a l'usuari que introdueixi un any i determina si és de traspàs.
