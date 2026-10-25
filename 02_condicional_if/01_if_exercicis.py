@@ -163,7 +163,21 @@ else:
 # del 3 % o menys; acceptable si és de 150 ms o menys i la pèrdua és del 5 %
 # o menys; en qualsevol altre cas, deficient.
 
+latencia = float(input("Introdueix la latència en ms: "))
+perdua = float(input("Introdueix el percentatge de paquets perduts: "))
 
+if latencia < 0:
+    print("La latència no pot ser negativa.")
+elif perdua < 0 or perdua > 100:
+    print("La pèrdua de paquets ha d'estar entre el 0 % i el 100 %.")
+elif latencia <= 30 and perdua <= 1:
+    print("La connexió és excel·lent.")
+elif latencia <= 80 and perdua <= 3:
+    print("La connexió és bona.")
+elif latencia <= 150 and perdua <= 5:
+    print("La connexió és acceptable.")
+else:
+    print("La connexió és deficient.")
 
 # Exercici 11: Cost mensual d'un pla de dades
 # Demana el tipus de pla (bàsic o plus) i el consum mensual en GB.
@@ -171,6 +185,24 @@ else:
 # El pla plus costa 20 € i inclou 30 GB; cada GB addicional costa 0,75 €.
 # Rebutja un consum negatiu o un tipus de pla desconegut. Calcula i mostra el
 # cost total, tenint en compte que no es cobra l'excés si no se supera el límit.
+
+pla = input("Introdueix el tipus de pla (bàsic o plus): ").lower().strip()
+consum = float("Introdueix el consum mensual en GB: ")
+
+if consum < 0:
+    print("El consum no pot ser negatiu.")
+elif pla == "bàsic":
+    cost = 10
+    if consum > 10:
+        cost += (consum - 10) * 1.50
+    print(f"EL cost total és: {cost:.2f} €")
+elif pla == "plus":
+    cost = 20
+    if consum > 30:
+        cost += (consum - 20) * 0.75
+    print(f"EL cost total és {cost:.2f} €")
+else:
+    print("Tipus de pla no vàlid.")
 
 
 
