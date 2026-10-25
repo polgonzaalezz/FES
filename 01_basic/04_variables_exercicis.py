@@ -18,3 +18,11 @@ print(f"El {nom_encaminador} està a {ubicacio} i té {nombre_ports} ports. Est�
 # i els GB consumits. Calcula quants GB queden i mostra el resultat.
 # Després, actualitza el consum amb un valor nou i torna a calcular
 # quants GB queden.
+dades_incloses_gb = 20
+dades_consumides_gb = 10
+dades_restants_gb = dades_incloses_gb - dades_consumides_gb
+print(f"Els GB restants son: {dades_restants_gb} GB")
+
+dades_consumides_gb = 16
+dades_restants_gb = dades_incloses_gb - dades_consumides_gb
+print(f"Els GB restants despres de l'actualutzació: {dades_restants_gb} GB")
