@@ -5,15 +5,28 @@
 # Exercici 1: Determinar el més gran de dos nombres
 # Demana a l'usuari que introdueixi dos nombres i mostra un missatge
 # que indiqui quin és més gran o si són iguals.
+print("\nExercici 1:")
+num1 = int(input("Introdueix el primer nombre: "))
+num2 = int(input("Introdueix el segon nombre: "))
+
+if num1 > num2:
+    print(f"{num1} és més gran que {num2}")
+elif num1 < num2:
+    print(f"{num2} és més gran que {num1}")
+else:
+    print(f"{num1} i {num2} son iguals")
+
 
 # Exercici 2: Calculadora senzilla
 # Demana a l'usuari dos nombres i una operació (+, -, *, /).
 # Fes l'operació i mostra'n el resultat (gestiona la divisió per zero).
 
+
 # Exercici 3: Any de traspàs
 # Demana a l'usuari que introdueixi un any i determina si és de traspàs.
 # Un any és de traspàs si és divisible per 4, excepte si és divisible per 100
 # però no per 400.
+
 
 # Exercici 4: Classificar edats
 # Demana a l'usuari que introdueixi una edat i classifica-la en:
