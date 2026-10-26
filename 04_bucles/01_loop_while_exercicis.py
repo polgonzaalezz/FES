@@ -50,7 +50,6 @@ while len(contrasenya) < 8:
   contrasenya = input("Introdueix una contrasenya (almenys 8 caràcters): ")
   if len(contrasenya) < 8:
     print("La contrasenya ha de tenir almenys 8 caràcters. Torna-ho a provar.")
-
 print("Contrasenya vàlida")
 
 # Exercici 5: Taula de multiplicar
