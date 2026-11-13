@@ -96,7 +96,6 @@ num = int(input("Introduieix un numero enter (0 per acabar): "))
 while num != 0:
   suma += num
   numero = int(input("Introdueix un altre número enter (0 per acabar): "))
-
 print(f"La suma total és: {suma}")
 
 # Exercici 8: Comptar les xifres d'un número
